@@ -3,16 +3,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 plt.rcParams['font.family'] = 'NanumGothic'
-from flask import Flask
 import streamlit as st
-from PIL import Image
 
-from bokeh.plotting import figure, output_file, show, output_notebook
-from bokeh.io import output_file, show
-from collections import OrderedDict
-from ipywidgets import interact
+from bokeh.plotting import figure,show
+from bokeh.io import show
 
-output_notebook()
 
 df = pd.read_csv("tong.csv")
 df["ymd"] = pd.to_datetime(df["ymd"], format="%Y%m%d%H%M%S")
@@ -492,7 +487,5 @@ else:  #강릉
         plt.xlabel("날짜")
         plt.ylabel("통행시간")
         st.pyplot(s) 
-
-
 
 # %%
