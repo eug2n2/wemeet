@@ -10,7 +10,7 @@ from bokeh.plotting import figure, show
 from bokeh.io import  show
 df= pd.read_csv("wemeetfinal.csv")
 #df= st.file_uploader("wemeetfinal.csv",type=["csv"])
-import chardet # 패키지 설치 필요
+
 
 # file_path -> Encoding Type
 def is_encoded(file_path: str):
@@ -31,7 +31,7 @@ def to_utf8(file_path: str, encoding_in: str):
         print('변환 실패')
 
 import sys
-
+from importlib import reload
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
