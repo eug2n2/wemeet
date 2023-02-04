@@ -10,6 +10,11 @@ from bokeh.plotting import figure, show
 from bokeh.io import  show
 df= pd.read_csv("wemeetfinal.csv")
 #df= st.file_uploader("wemeetfinal.csv",type=["csv"])
+import matplotlib 
+from matplotlib import font_manager,rc
+
+matplotlib.use('SVG')
+matplotlib.rc("font", family='NanumGothic')
 
 df["ymd"] = pd.to_datetime(df["ymd"], format="%Y%m%d%H%M%S")
 df["year"] = df["ymd"].dt.year
