@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 from bokeh.plotting import figure, show
 from bokeh.io import  show
-df= pd.read_csv("wemeetfinal.csv")
+df= pd.read_csv("wemeetfinal.csv",encoding = 'utf-8')
 #df= st.file_uploader("wemeetfinal.csv",type=["csv"])
 import chardet # 패키지 설치 필요
 
