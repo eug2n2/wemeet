@@ -91,7 +91,7 @@ region= ['대구', '부산','대전','울산' ,'강릉']
 status = st.radio("서울에서 출발할 지역을 선택하세요", region)
     # Create Radio Buttons
 options = ['2019년', '2020년','2021년', '2022년', '2023년',"ALL"]
-syear = st.radio("연도를 선택하세요!!", options,horizontal=True)
+syear = st.radio("연도를 선택하세요", options,horizontal=True)
 
 if status == region[0]: #대구
     if syear == options[0]:
