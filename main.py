@@ -8,8 +8,8 @@ import streamlit as st
 from bokeh.plotting import figure,show
 from bokeh.io import show
 
-df= st.file_uploader("tong.csv")
-
+#df= st.file_uploader("tong.csv")
+df= pd.read_csv("wemeetfinal.csv")
 
 df["ymd"] = pd.to_datetime(df["ymd"], format="%Y%m%d%H%M%S")
 df["year"] = df["ymd"].dt.year
