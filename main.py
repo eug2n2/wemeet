@@ -14,8 +14,6 @@ df= pd.read_csv("wemeetfinal.csv")
 import matplotlib
 import matplotlib.font_manager as fm
 
-matplotlib.rcParams['font.family'] = 'NanumGothic'
-matplotlib.rcParams['axes.unicode_minus'] = False
 
 
 df["ymd"] = pd.to_datetime(df["ymd"], format="%Y%m%d%H%M%S")
@@ -98,7 +96,10 @@ options = ['2019년', '2020년','2021년', '2022년', '2023년',"ALL"]
 syear = st.radio("연도를 선택하세요", options,horizontal=True)
 
 if status == region[0]: #대구
-    if syear == options[0]:
+    if syear == options[0]: 
+        
+        matplotlib.rcParams['font.family'] = 'NanumGothic'
+        matplotlib.rcParams['axes.unicode_minus'] = False
         s=plt.figure(figsize=(20,5))
         plt.title("2019년 서울->대구 통행시간", fontsize=15)
         d = daegu_ymd[(daegu_ymd["year"]==2019)]
