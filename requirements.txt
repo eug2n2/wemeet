@@ -4,4 +4,4 @@ pandas
 ipywidgets 
 bokeh
 matplotlib
-chardet 
+sys
