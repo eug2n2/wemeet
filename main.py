@@ -12,7 +12,7 @@ df= pd.read_csv("wemeetfinal.csv")
 #df= st.file_uploader("wemeetfinal.csv",type=["csv"])
 
 import matplotlib
-import matplotlib.font_manager as fm
+from matplotlib import rc
 
 
 
