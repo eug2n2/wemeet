@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 from bokeh.plotting import figure, show
 from bokeh.io import  show
-df= pd.read_csv("wemeetfinal.csv",encoding = 'utf-8')
+df= pd.read_csv("wemeetfinal.csv")
 #df= st.file_uploader("wemeetfinal.csv",type=["csv"])
 import chardet # 패키지 설치 필요
 
@@ -30,11 +30,10 @@ def to_utf8(file_path: str, encoding_in: str):
     except:
         print('변환 실패')
 
-import matplotlib
-from matplotlib import rc
-        
-matplotlib.rcParams['font.family'] = 'NanumGothic'
-matplotlib.rcParams['axes.unicode_minus'] = False
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 
