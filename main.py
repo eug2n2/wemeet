@@ -11,32 +11,6 @@ from bokeh.io import  show
 df= pd.read_csv("wemeetfinal.csv")
 #df= st.file_uploader("wemeetfinal.csv",type=["csv"])
 
-
-# file_path -> Encoding Type
-def is_encoded(file_path: str):
-    rawdata = open(file_path, mode='rb').read()
-    data = chardet.detect(rawdata)
-    result = data['encoding']
-    return result
-
-# File_path, Encoding_Type -> Change Files encoding type
-def to_utf8(file_path: str, encoding_in: str):
-    try:
-        with open(file_path, 'r', encoding=encoding_in) as f:
-            datas = f.read()
-
-        with open(file_path, 'w', encoding='utf-8') as k:
-            k.write(datas)
-    except:
-        print('변환 실패')
-
-import sys
-from importlib import reload
-reload(sys)
-sys.setdefaultencoding('utf-8')
-
-
-
 df["ymd"] = pd.to_datetime(df["ymd"], format="%Y%m%d%H%M%S")
 df["year"] = df["ymd"].dt.year
 df["MonthDay"] = df["ymd"].dt.strftime('%m-%d')
