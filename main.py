@@ -8,8 +8,9 @@ import streamlit as st
 from bokeh.plotting import figure,show
 from bokeh.io import show
 
+file= st.file_uploader("tong.csv")
+df=pd.read_csv(file)
 
-df = pd.read_csv("tong.csv")
 df["ymd"] = pd.to_datetime(df["ymd"], format="%Y%m%d%H%M%S")
 df["year"] = df["ymd"].dt.year
 df["MonthDay"] = df["ymd"].dt.strftime('%m-%d')
