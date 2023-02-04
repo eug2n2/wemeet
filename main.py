@@ -35,6 +35,7 @@ daegu_ymd = daegu_ymd.reset_index()
 daegu_ymd["order2"] = daegu_ymd.groupby("year")["ymd"].rank(method="dense", ascending=True)
 daegu_ymd = daegu_ymd[daegu_ymd["order"]<=6]
 years = daegu_ymd['year'].unique()
+years = years.astype(int)
 
 #부산
 busan["통행시간"] = busan["통행시간"].fillna(busan.groupby(["year","시"])["통행시간"].transform('mean'))
@@ -47,6 +48,7 @@ busan_ymd = busan_ymd.reset_index()
 busan_ymd["order2"] = busan_ymd.groupby("year")["ymd"].rank(method="dense", ascending=True)
 busan_ymd = busan_ymd[busan_ymd["order"]<=6]
 years = busan_ymd['year'].unique()
+years = years.astype(int)
 
 #대전
 daejeon["통행시간"] = daejeon["통행시간"].fillna(daejeon.groupby(["year","시"])["통행시간"].transform('mean'))
@@ -59,6 +61,7 @@ daejeon_ymd = daejeon_ymd.reset_index()
 daejeon_ymd["order2"] = daejeon_ymd.groupby("year")["ymd"].rank(method="dense", ascending=True)
 daejeon_ymd = daejeon_ymd[daejeon_ymd["order"]<=6]
 years = daejeon_ymd['year'].unique()
+years = years.astype(int)
 
 #강릉
 gang["통행시간"] = gang["통행시간"].fillna(gang.groupby(["year","시"])["통행시간"].transform('mean'))
@@ -71,7 +74,7 @@ gang_ymd = gang_ymd.reset_index()
 gang_ymd["order2"] = gang_ymd.groupby("year")["ymd"].rank(method="dense", ascending=True)
 gang_ymd = gang_ymd[gang_ymd["order"]<=6]
 years = gang_ymd['year'].unique()
-
+years = years.astype(int)
 #울산
 ulsan["통행시간"] = ulsan["통행시간"].fillna(ulsan.groupby(["year","시"])["통행시간"].transform('mean'))
 ulsan_ymd = ulsan.groupby("ymd").mean()
@@ -83,7 +86,7 @@ ulsan_ymd = ulsan_ymd.reset_index()
 ulsan_ymd["order2"] = ulsan_ymd.groupby("year")["ymd"].rank(method="dense", ascending=True)
 ulsan_ymd = ulsan_ymd[ulsan_ymd["order"]<=6]
 years = ulsan_ymd['year'].unique()
-
+years = years.astype(int)
 
 
 
