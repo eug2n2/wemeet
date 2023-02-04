@@ -10,7 +10,9 @@ from bokeh.plotting import figure, show
 from bokeh.io import  show
 df= pd.read_csv("wemeetfinal.csv")
 #df= st.file_uploader("wemeetfinal.csv",type=["csv"])
+import sys
 
+sys.stdin.encoding
 import matplotlib
 from matplotlib import rc
         
