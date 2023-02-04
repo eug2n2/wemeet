@@ -5,4 +5,4 @@ ipywidgets
 collections
 bokeh.io 
 bokeh.plotting
-matpoltlib
+matpoltlib.pyplot
