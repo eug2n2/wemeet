@@ -2,7 +2,6 @@ streamlit
 numpy
 pandas
 ipywidgets 
-collections
 bokeh.io 
 bokeh.plotting
 matpoltlib.pyplot
