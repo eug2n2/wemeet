@@ -1,4 +1,4 @@
-rc
+
 numpy
 pandas
 ipywidgets 
