@@ -1,7 +1,6 @@
 streamlit
 numpy
 pandas
-matplotlib.pyplot 
 ipywidgets 
 collections
 bokeh.io 
